@@ -1,21 +1,120 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.todo-Header {
+  height: 100px;
+  background-color: #b740a8;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 100;
+  color: white;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.todo-section {
+  position: relative;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-left {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 45%;
+  align-items: center;
+  background-color: #b740a8;
+  margin-left: 20px;
+  height: 600px;
+}
+
+.todo-right {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 45%;
+  align-items: center;
+  background-color: #b740a8;
+  margin-right: 20px;
+}
+
+.todo-item {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.todo-item-text {
+  color: white;
+  font-size: 30px;
+  font-weight: 600;
+  flex-basis: 50%;
+  margin-left: 20px;
+}
+
+.complete-btn {
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #57f16c;
+  border: none;
+  height: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.delete-btn {
+  background-color: red;
+  border: none;
+  height: 30px;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.todo-form input {
+  height: 60px;
+  width: 600px;
+  font-size: large;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.todo-form-buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  flex-basis: 50%;
+}
+.add-btn {
+  width: 80px;
+  margin-right: 10px;
+  background-color: #57f16c;
+  height: 30px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.cancel-btn {
+  width: 80px;
+  border: none;
+  background-color: lightgrey;
+  height: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.error {
+  color: red;
+  font-weight: 400;
+  font-size: large;
 }
